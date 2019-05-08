@@ -29,5 +29,5 @@ $total = $total/$count;
 
 echo json_encode($total);
 
-//echo $records[0]['productName'];
+//echo $records[0]['name'];
 ?>

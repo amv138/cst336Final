@@ -16,5 +16,5 @@ $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //use fetch for one record, fetchA
 
 echo json_encode($records);
 
-//echo $records[0]['productName'];
+//echo $records[0]['name'];
 ?>

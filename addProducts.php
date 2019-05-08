@@ -19,13 +19,13 @@ if (!isset($_SESSION['adminName'])) {
     <body>
         
         <h1>Add new product</h1>
-        Enter Product Name:<input type="text" id = "productName" size="50">
+        Enter Product Name:<input type="text" id = "name" size="50">
         <br>
-        Enter Product Description: <textarea id="productDescription" cols="40" rows="3"></textarea>
+        Enter Product Description: <textarea id="description" cols="40" rows="3"></textarea>
         <br>
-        Product Image:<input type = "text" id = "productImage">
+        Product Image:<input type = "text" id = "image_url">
         <br/>
-        Product Price: <input type="text" id="productPrice">
+        Product Price: <input type="text" id="price">
         <br/>
         
         <button id="submitButton">Add Product</button>
@@ -38,10 +38,10 @@ if (!isset($_SESSION['adminName'])) {
                     type: "GET",
                     url: "api/addProductAPI.php",
                     dataType: "json",
-                    data : {"productName": $("#productName").val(),
-                        "productDescription": $("#productDescription").val(),
-                        "productImage": $("#productImage").val(),
-                        "productPrice": $("#productPrice").val()
+                    data : {"name": $("#name").val(),
+                        "description": $("#description").val(),
+                        "image_url": $("#image_url").val(),
+                        "price": $("#price").val()
                         
                     },
                     success: function(data, status) {

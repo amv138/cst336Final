@@ -14,13 +14,13 @@ if (!isset($_SESSION['adminName'])) {
     
     $arr = array();
     
-    $arr[":productName"] = $_GET["productName"];
-    $arr[":productDescription"] = $_GET["productDescription"];
-    $arr[":productImage"] = $_GET["productImage"];
-    $arr[":productPrice"] = $_GET["productPrice"];
+    $arr[":name"] = $_GET["name"];
+    $arr[":description"] = $_GET["description"];
+    $arr[":image_url"] = $_GET["image_url"];
+    $arr[":price"] = $_GET["price"];
   
    $sql = "INSERT INTO products ( `name`, `description`, `image_url`, `price`) 
-    VALUES (:productName, :productDescription, :productImage, :productPrice, :catId)";
+    VALUES (:name, :description, :image_url, :price, :catId)";
    
     $stmt = $conn->prepare($sql);
     $stmt->execute($arr);

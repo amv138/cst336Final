@@ -4,9 +4,9 @@
     include '../inc/dbConnection.php';
     $conn = getDatabaseConnection("ottermart");
 
-    $productId = $_GET['productId'];
+    $product_id = $_GET['product_id'];
     
-    $sql = "SELECT * FROM products WHERE product_id = $productId";
+    $sql = "SELECT * FROM products WHERE product_id = $product_id";
     
     $stmt = $conn->prepare($sql);
     $stmt->execute();

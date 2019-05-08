@@ -31,5 +31,5 @@ $range = $max - $min;
 
 echo json_encode($range);
 
-//echo $records[0]['productName'];
+//echo $records[0]['name'];
 ?>

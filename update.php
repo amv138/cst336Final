@@ -13,12 +13,12 @@
                     type: "GET",
                     url: "api/getProductInfo.php",
                     dataType: "json",
-                    data:{"productId": <?=$_GET['productId']?>},
+                    data:{"product_id": <?=$_GET['product_id']?>},
                     success: function(data, status) {
-                         $("#productName").val(data["productName"]);
-                         $("#productDescription").val(data["productDescription"]);
-                         $("#productPrice").val(data["productPrice"]);
-                         $("#productImage").val(data["productImage"]);
+                         $("#name").val(data["name"]);
+                         $("#description").val(data["description"]);
+                         $("#price").val(data["price"]);
+                         $("#image_url").val(data["image_url"]);
                     }
                 });
                 
@@ -32,11 +32,11 @@
                             type: "GET",
                             url: "api/updateProductAPI.php",
                             dataType: "json",
-                            data:{"productId": <?=$_GET['productId']?>,
-                                "productDescription": $("#productDescription").val(),
-                                "productPrice": $("#productPrice").val(),
-                                "productName": $("#productName").val(),
-                                "productImage": $("#productImage").val()
+                            data:{"product_id": <?=$_GET['product_id']?>,
+                                "description": $("#description").val(),
+                                "price": $("#price").val(),
+                                "name": $("#name").val(),
+                                "image_url": $("#image_url").val()
     
                             },
                             success: function(data, status) {
@@ -55,13 +55,13 @@
     </head>
     <body>
     <h1> Update Product</h1>
-    Enter Product Name:<input type="text" id = "productName" size="50">
+    Enter Product Name:<input type="text" id = "name" size="50">
     <br>
-    Enter Product Description: <textarea id="productDescription" cols="40" rows="3"></textarea>
+    Enter Product Description: <textarea id="description" cols="40" rows="3"></textarea>
     <br>
-    Product Image:<input type = "text" id = "productImage">
+    Product Image:<input type = "text" id = "image_url">
     <br/>
-    Product Price: <input type="text" id="productPrice">
+    Product Price: <input type="text" id="price">
     <br/>
     <button id="submitButton">Update Product</button>
     

@@ -9,7 +9,7 @@ if (!isset($_SESSION['adminName'])) {
     include 'inc/dbConnection.php';
     $conn = getDatabaseConnection("ottermart");
 
-    $sql = "DELETE FROM `products` WHERE `products`.`product_id` = " . $_POST['productId'];
+    $sql = "DELETE FROM `products` WHERE `products`.`product_id` = " . $_POST['product_id'];
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     

@@ -11,20 +11,20 @@ if (!isset($_SESSION['adminName'])) {
     include '../inc/dbConnection.php';
     $conn = getDatabaseConnection("carmart");
     
-    //$productId = $_GET['productId'];
+    //$product_id = $_GET['product_id'];
     
     $sql = "UPDATE products
-    SET price = :productPrice,
-    name = :productName, 
-    description =  :productDescription, 
-    image_url = :productImage
-    WHERE products.product_id =  " .  $_GET['productId'];
+    SET price = :price,
+    name = :name, 
+    description =  :description, 
+    image_url = :image_url
+    WHERE products.product_id =  " .  $_GET['product_id'];
     
     $arr = array();
-    $arr[":productName"] = $_GET["productName"];
-    $arr[":productDescription"] = $_GET["productDescription"];
-    $arr[":productImage"] = $_GET["productImage"];
-    $arr[":productPrice"] = $_GET["productPrice"];
+    $arr[":name"] = $_GET["name"];
+    $arr[":description"] = $_GET["description"];
+    $arr[":image_url"] = $_GET["image_url"];
+    $arr[":price"] = $_GET["price"];
     
     $stmt = $conn->prepare($sql);
     $stmt->execute($arr);

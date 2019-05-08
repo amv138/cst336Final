@@ -21,7 +21,7 @@
                        break;
         //Value 1 is name
         case "name":
-                        $sql = "SELECT * FROM products WHERE productName = :value1";
+                        $sql = "SELECT * FROM products WHERE name = :value1";
                         $np[':value1'] = $_GET['value1'];
                         break;
         //value1 is manufacturer

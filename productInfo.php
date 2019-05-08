@@ -13,12 +13,12 @@
                     type: "GET",
                     url: "api/getProductInfo.php",
                     dataType: "json",
-                    data:{"productId": <?=$_GET['productId']?>},
+                    data:{"product_id": <?=$_GET['product_id']?>},
                     success: function(data, status) {
-                         $("#productName").html(data["productName"]);
-                         $("#productDescription").html(data["productDescription"]);
-                         $("#productPrice").html("$"+data["price"]);
-                         $("#productImage").attr("src", data["productImage"]);
+                         $("#name").html(data["name"]);
+                         $("#description").html(data["description"]);
+                         $("#price").html("$"+data["price"]);
+                         $("#image_url").attr("src", data["image_url"]);
                     }
                 });
             
@@ -30,13 +30,13 @@
     <body>
         
         
-        <h2 id="productName"></h2>
+        <h2 id="name"></h2>
 
-        <h3 id="productDescription"></h3>
+        <h3 id="description"></h3>
 
-        <img src="" id="productImage" width="200"/>
+        <img src="" id="image_url" width="200"/>
         
-        <div id="productPrice"></div>
+        <div id="price"></div>
 
     </body>
 </html>
