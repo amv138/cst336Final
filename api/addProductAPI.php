@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+//checks whether user has logged in
+if (!isset($_SESSION['adminName'])) {
+    
+    exit;
+    
+}
     //addproductapi.php
     //Returns the count of items in the DB and adds an item given.
     include '../inc/dbConnection.php';

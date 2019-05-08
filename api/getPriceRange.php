@@ -18,16 +18,18 @@ $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //use fetch for one record, fetchA
 
 //print_r($records); //displays array content
 
-$total = 0;
-$count = 0;
+$min = 0;
+$max = 0;
 foreach ($records as &$value) {
-    $total += $value["price"];
-    $count++;
+    if($min > $value["price"]
+        $min = $value["price"];
+    if($max < $value["price"])
+        $max = $value["price"];
 }
 
-$total = $total/$count;
+$range = $max - $min;
 
-echo json_encode($total);
+echo json_encode($range);
 
 //echo $records[0]['productName'];
 ?>
