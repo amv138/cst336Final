@@ -1,7 +1,8 @@
 <?php
-
+    //addproductapi.php
+    //Returns the count of items in the DB and adds an item given.
     include '../inc/dbConnection.php';
-    $conn = getDatabaseConnection("ottermart");
+    $conn = getDatabaseConnection("carmart");
     
     $arr = array();
     
@@ -9,14 +10,13 @@
     $arr[":productDescription"] = $_GET["productDescription"];
     $arr[":productImage"] = $_GET["productImage"];
     $arr[":productPrice"] = $_GET["productPrice"];
-    $arr[":catId"] = $_GET["catId"];
   
-   $sql = "INSERT INTO om_product ( `productName`, `productDescription`, `productImage`, `price`, `catId`) 
+   $sql = "INSERT INTO products ( `name`, `description`, `image_url`, `price`) 
     VALUES (:productName, :productDescription, :productImage, :productPrice, :catId)";
    
     $stmt = $conn->prepare($sql);
     $stmt->execute($arr);
-    $sql ="SELECT COUNT(1) totalproducts FROM om_product";
+    $sql ="SELECT COUNT(1) totalproducts FROM products";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $records = $stmt->fetch(PDO::FETCH_ASSOC);

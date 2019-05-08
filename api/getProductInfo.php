@@ -1,12 +1,12 @@
 <?php
-
+    //Returns a product.
     
     include '../inc/dbConnection.php';
     $conn = getDatabaseConnection("ottermart");
 
     $productId = $_GET['productId'];
     
-    $sql = "SELECT * FROM om_product WHERE productId = $productId";
+    $sql = "SELECT * FROM products WHERE product_id = $productId";
     
     $stmt = $conn->prepare($sql);
     $stmt->execute();

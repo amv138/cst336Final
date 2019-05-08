@@ -9,24 +9,22 @@ if (!isset($_SESSION['adminName'])) {
 }
 
     include '../inc/dbConnection.php';
-    $conn = getDatabaseConnection("ottermart");
+    $conn = getDatabaseConnection("carmart");
     
     //$productId = $_GET['productId'];
     
-    $sql = "UPDATE om_product
+    $sql = "UPDATE products
     SET price = :productPrice,
-    productName = :productName, 
-    productDescription =  :productDescription, 
-    productImage = :productImage,
-    catId = :catId
-    WHERE om_product.productId =  " .  $_GET['productId'];
+    name = :productName, 
+    description =  :productDescription, 
+    image_url = :productImage
+    WHERE products.product_id =  " .  $_GET['productId'];
     
     $arr = array();
     $arr[":productName"] = $_GET["productName"];
     $arr[":productDescription"] = $_GET["productDescription"];
     $arr[":productImage"] = $_GET["productImage"];
     $arr[":productPrice"] = $_GET["productPrice"];
-    $arr[":catId"] = $_GET["catId"];
     
     $stmt = $conn->prepare($sql);
     $stmt->execute($arr);

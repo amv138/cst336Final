@@ -27,28 +27,13 @@ if (!isset($_SESSION['adminName'])) {
         <br/>
         Product Price: <input type="text" id="productPrice">
         <br/>
-        Categories Name: <Select id = "catId">
-        <Option> Select One </Option>
-        </Select><br>
         
         <button id="submitButton">Add Product</button>
         <span id="totalProducts"></span>
     </body>
     
-    <script>
-        $.ajax({
-                    type: "GET",
-                    url: "../lab6/api/getCategories.php",
-                    dataType: "json",
-                    success: function(data, status) {
-                        data.forEach(function(key) {
-                            $("#catId").append("<option value=" + key["catId"] + ">" + key["catName"] + "</option>");
-                        });
-                    }
-                }); 
-                
+    <script>    
         $("#submitButton").on("click", function(){
-                   //alert("test");
                    $.ajax({
                     type: "GET",
                     url: "api/addProductAPI.php",
@@ -56,8 +41,7 @@ if (!isset($_SESSION['adminName'])) {
                     data : {"productName": $("#productName").val(),
                         "productDescription": $("#productDescription").val(),
                         "productImage": $("#productImage").val(),
-                        "productPrice": $("#productPrice").val(),
-                        "catId": $("#catId").val()
+                        "productPrice": $("#productPrice").val()
                         
                     },
                     success: function(data, status) {

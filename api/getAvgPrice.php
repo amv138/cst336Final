@@ -2,9 +2,9 @@
 
 //Establishing db
 include '../inc/dbConnection.php';
-$dbConn = getDatabaseConnection("ottermart");
+$dbConn = getDatabaseConnection("carmart");
 
-$sql = "SELECT * FROM om_product ORDER BY price";
+$sql = "SELECT * FROM products ORDER BY price";
 $stmt = $dbConn -> prepare($sql);  //$connection MUST be previously initialized
 $stmt->execute();
 $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //use fetch for one record, fetchAll for multiple

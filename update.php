@@ -6,18 +6,6 @@
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
          <script>
-                $.ajax({
-                    type: "GET",
-                    url: "../lab6/api/getCategories.php",
-                    dataType: "json",
-                    success: function(data, status) {
-                        data.forEach(function(key) {
-                            $("#catId").append("<option value=" + key["catId"] + ">" + key["catName"] + "</option>");
-                        });
-                        getProductInfo();
-                    }
-                }); 
-                
                 
                  
             function getProductInfo() {    
@@ -31,7 +19,6 @@
                          $("#productDescription").val(data["productDescription"]);
                          $("#productPrice").val(data["productPrice"]);
                          $("#productImage").val(data["productImage"]);
-                         $("#catId").val(data["catId"]).change();
                     }
                 });
                 
@@ -49,7 +36,6 @@
                                 "productDescription": $("#productDescription").val(),
                                 "productPrice": $("#productPrice").val(),
                                 "productName": $("#productName").val(),
-                                "catId": $("#catId").val(),
                                 "productImage": $("#productImage").val()
     
                             },
@@ -77,10 +63,6 @@
     <br/>
     Product Price: <input type="text" id="productPrice">
     <br/>
-    Categories Name: <Select id = "catId">
-    <Option> Select One </Option>
-    </Select><br>
-    
     <button id="submitButton">Update Product</button>
     
     <span id="updated"></span>
