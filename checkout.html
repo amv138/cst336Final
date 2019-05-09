@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link href="checkout.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Chivo:300,400,700" rel="stylesheet">
+        <script>
+            var total = 0;
+            var rproduct_id = sessionStorage.getItem("product_id");
+            var rproduct_name;
+            
+            $(document).on("ready", function() {
+                
+                $.ajax({
+                    type: "GET",
+                    url: "api/getCheckoutProduct.php",
+                    dataType: "json",
+                    data: {
+                        'prod_id' : rproduct_id,
+                    },
+                    success: function(data, status) {
+                        total = (parseFloat(data.price)*1.0925).toFixed(2);
+                        rproduct_name = data.name;
+                        $("#car").html(rproduct_name);
+                        $("#checkout_img").html("<img src=" + data.image_url + " alt='car in cart' id='car_img' />");
+                        $("#price").html("$" + data.price);
+                        $("#tax").html("$" + (parseFloat(data.price)*.0925).toFixed(2));
+                        $("#total").html("$" + total);
+                    }
+                });
+                
+                $("#final_purchase").on("click", function() {
+                    alert(rproduct_name);
+                    alert("Purchased!");
+                    $.ajax({
+                        type: "GET",
+                        url: "api/addReceipt.php",
+                        dataType: "json",
+                        data: {
+                            'prod_id' : rproduct_id,
+                            'prod_name' : rproduct_name,
+                        },
+                        success: function(data, status) {
+                            alert("Successfully purchased a new car!");
+                        }
+                    });
+                });
+                
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div id="home-img">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="showroom.html">Showroom</a>
+                <a href="checkout.html">Checkout</a>
+            </nav>
+            <div id="checkout_container">
+                <table>
+                    <tr>
+                        <th>Car Make/Model</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Applicable Tax</th>
+                        <th>Total Price</th>
+                    </tr>
+                    <tr>
+                        <td id="car"></td>
+                        <td id="checkout_img"></td>
+                        <td id="price"></td>
+                        <td id="tax"></td>
+                        <td id="total"></td>
+                    </tr>
+                </table>
+                <h1 id="name"></h1>
+                <h1 id="price"></h1>
+                <h1 id="total"></h1>
+                <button id="final_purchase">Place Order</button>
+            </div>
+        </div>
+    </body>
+</html>
