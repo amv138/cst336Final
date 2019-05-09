@@ -1,0 +1,93 @@
+[09-May-2019 05:49:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 15
+[09-May-2019 05:49:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MX-5 Miata)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 15
+[09-May-2019 05:50:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MX-5 Miata)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 05:51:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MX-5 Miata)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 05:51:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MX-5 Miata)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 05:51:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Mazda MX-5 Miata RF)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 05:52:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MX5 Miata RF)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 05:52:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MX55 Miata RF)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 05:53:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MX55 Miata RF, 6, Mazda MX55 Miata RF)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 05:53:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MX55 Miata RF, 6, Mazda MX55 Miata RF)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 05:57:10 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MX55 Miata RF)' at line 1' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 05:57:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Mazda' in 'field list'' in /home/ubuntu/workspace/cst336Final/api/addReceipt.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addReceipt.php(16): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 16
+[09-May-2019 06:03:59 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336Final/api/addReceipt.php on line 18
+[09-May-2019 06:03:59 UTC] PHP Stack trace:
+[09-May-2019 06:03:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336Final/api/addReceipt.php:0
+[09-May-2019 06:46:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '5' for key 'PRIMARY'' in /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php(21): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php on line 21
+[09-May-2019 06:48:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM gallery' at line 1' in /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php(22): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php on line 22
+[09-May-2019 06:51:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM gallery' at line 1' in /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php on line 22
+[09-May-2019 06:51:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'REMOVE * FROM gallery' at line 1' in /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php:22
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php(22): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/addImageToGallery.php on line 22
+[09-May-2019 06:58:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM gallery' at line 1' in /home/ubuntu/workspace/cst336Final/api/getImages.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/getImages.php(12): PDOStatement->execute(NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/getImages.php on line 12
+[09-May-2019 06:59:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `gallery`' at line 1' in /home/ubuntu/workspace/cst336Final/api/getImages.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/cst336Final/api/getImages.php(12): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336Final/api/getImages.php on line 12

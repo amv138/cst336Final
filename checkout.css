@@ -1,0 +1,55 @@
+table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}
+
+nav {
+  overflow: hidden;
+  background-color: rgba(0,0,0, 0.60);
+
+}
+nav a {
+    float: left;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+nav a:hover {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+#car_img {
+    height: auto; 
+    width: auto; 
+    max-width: 128px; 
+    max-height: 128px;
+}
+
+#final_purchase {
+    text-align: center;
+    font-size: 32px;
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(0,0,0, 0.60); /* Green */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    display: block;
+    width: 130px;
+    margin: 10px auto 0px auto;
+}
+
+#final_purchase:hover {
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+table {
+    font-size: 24px;
+}
