@@ -25,7 +25,18 @@
             }    
                 
                 $(document).ready(function(){  
-                    
+                                    $.ajax({
+                    type: "GET",
+                    url: "api/getProductInfo.php",
+                    dataType: "json",
+                    data:{"product_id": <?=$_GET['product_id']?>},
+                    success: function(data, status) {
+                         $("#name").val(data["name"]);
+                         $("#description").val(data["description"]);
+                         $("#price").val(data["price"]);
+                         $("#image_url").val(data["image_url"]);
+                    }
+                });
                     $("#submitButton").on("click",function(){
                         
                         $.ajax({

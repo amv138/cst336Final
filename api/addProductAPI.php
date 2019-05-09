@@ -20,7 +20,7 @@ if (!isset($_SESSION['adminName'])) {
     $arr[":price"] = $_GET["price"];
   
    $sql = "INSERT INTO products ( `name`, `description`, `image_url`, `price`) 
-    VALUES (:name, :description, :image_url, :price, :catId)";
+    VALUES (:name, :description, :image_url, :price)";
    
     $stmt = $conn->prepare($sql);
     $stmt->execute($arr);

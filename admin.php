@@ -56,24 +56,20 @@ if (!isset($_SESSION['adminName'])) {
                     
                 });//ajax
                 
+               $("#getUserCount").click(function() {
                 $.ajax({
                     type: "get",
-                    url: "api/searchProducts.php",
+                    url: "api/getUserCount.php",
                     dataType: "json",
-                    data: {
-                      "action": "name",
-                      "value1": "test",
-                      "value2": $("#keyword").val()
-                    },
                     success: function(data, status) {
-                        alert(data);
+                        alert(data['COUNT(*)']);
                     },
                     complete: function(data, status) { //optional, used for debugging purposes
                       //alert(status);
                     }
                   });//ajax
-            
-                
+               });
+                             $("#getAvg").click(function() {
                  $.ajax({
 
                     type: "GET",
@@ -86,9 +82,25 @@ if (!isset($_SESSION['adminName'])) {
                     complete: function(data,status) { //optional, used for debugging purposes
                     //alert(status);
                     }
+                 });
+                             });
+                    
+                             $("#getRange").click(function() {                    
+                $.ajax({
+
+                    type: "GET",
+                    url: "./api/getPriceRange.php",
+                    dataType: "json",
+                    success: function(data,status) {
+                      //alert(data[0].name);
+                      alert(data);
+                    },
+                    complete: function(data,status) { //optional, used for debugging purposes
+                    //alert(status);
+                    }
                     
                 });//ajax
-                
+                             });
                
                 
             });//documentReady
@@ -132,6 +144,9 @@ if (!isset($_SESSION['adminName'])) {
     <form action="logout.php">
         <button>Logout</button>
     </form>
+    <button id = "getRange">Get Range</button>
+    <button id = "getAvg">Get Avg Price</button>
+    <button id = "getUserCount">Get user count</button>
     
     <br><br>
     

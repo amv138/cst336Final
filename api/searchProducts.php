@@ -14,7 +14,7 @@
         
         //value1 min, value2 max
         case "priceRange":    
-            //$sql = "INSERT INTO lab8_pixabay (imageURL, keyword) VALUES (:favorite, :keyword)";
+            $sql = 
                     "SELECT * FROM products WHERE price > :value1 AND price < :value2";
                     $np[':value1'] = $_GET['value1'];
                     $np[':value2'] = $_GET['value2'];
@@ -31,8 +31,6 @@
                         break;
                         
     }//switch
-
-
     $stmt = $conn->prepare($sql);
     $stmt->execute($np);
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);

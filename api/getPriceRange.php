@@ -21,7 +21,7 @@ $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //use fetch for one record, fetchA
 $min = 0;
 $max = 0;
 foreach ($records as &$value) {
-    if($min > $value["price"]
+    if($min > $value["price"])
         $min = $value["price"];
     if($max < $value["price"])
         $max = $value["price"];

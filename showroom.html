@@ -20,14 +20,49 @@
                     });
                 }
             });
-            
+    $(document).ready(function(){
             $(document).click(function() {
-                $("button").click(function(event) {
+                $(".purchase_button").click(function(event) {
                     // alert(event.target.id);
                     sessionStorage.setItem("product_id", event.target.id);
                     window.location.href = "checkout.html";
                 });
             });
+             $("#searchBtn").click(function() {
+                    // alert(event.target.id);
+                let name = "";
+                let min = 0;
+                let max = 9999999999;
+                let description = "";
+                if($("#searchName").val() != name)
+                    name = $("#searchName").val();
+                if($("#min").val() != min && $("#min").val() != '')
+                    min = $("#min").val();
+                if($("#max").val() != max && $("#max").val() != '')
+                    max = $("#max").val();
+                if($("#searchDescription").val() != description)
+                    description = $("#searchDescription").val();
+                
+                $.ajax({
+                type: "GET",
+                url: "api/searchAllProducts.php",
+                dataType: "json",
+                data: {
+                        'name' : name,
+                        'min' : min,
+                        'max' : max,
+                        'description' : description,
+                    },
+                success: function(data, status) {
+                    $("#all_products").html("");
+                    data.forEach(function(key) {
+                        $("#all_products").append(" <div class='product_container'><div class='product_image_container'><image src=" + key["image_url"] + " class='product_image' /></div><div class='product_info'><h1>" + key['name'] +"</h1><h2 class='product_price'>$" + key['price'] + "</h2><p>" + key['description'] + "</p></div><div class='product_purchase'><button class='purchase_button' id=" + key['product_id'] + ">Purchase</button></div></div> " );
+                    });
+                }
+            });
+             });
+        });
+            
         </script>
         
     </head>
@@ -39,6 +74,25 @@
             <a href="showroom.html">Showroom</a>
             <a href="checkout.html">Checkout</a>
         </nav>
+        
+        <div>
+            <div class="form-group">
+                <label for="searchName">Search</label>
+                <input class="form-control" id="searchName" aria-describedby="searchHelp" placeholder="Enter name">
+</div>
+<div class="input-group">
+                <input type="text" id = "min" class="form-control" placeholder="Min"/>
+                <span class="input-group-addon">-</span>
+                <input type="text" id = "max" class="form-control" placeholder="Max"/>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <input class="form-control" id="searchDescription" aria-describedby="searchHelp" placeholder="Enter Description">
+            </div>
+            <button id = "searchBtn">Search</button>
+            
+        </div>
         
         <div id="all_products">
         </div>
